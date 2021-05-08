@@ -73,8 +73,7 @@ header nav .branding
 
 .hero .right{
     color: var(--pure);
-}q
-
+}
 .hero .right h6{
     font-size: 1.6rem;
     color:var(--primary);
@@ -221,4 +220,26 @@ section.services .card-wrapper .card:hover{
 section.services .card-wrapper .card:hover h2, section.services .card-wrapper .card:hover p {
     color:var(--pure);
 
+}
+
+
+
+
+
+section.freelancer{
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/camera.png);
+    color: var(--pure);
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%,67% 80%, 0 100% );
+    padding-bottom: 14rem;
+}
+
+section.freelancer h1{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+section.freelancer p{
+    margin-bottom: 2rem;
+    font-family: "latto", sans-serif;
 }
