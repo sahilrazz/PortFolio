@@ -301,7 +301,7 @@ section.reviews .slider .slide{
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0 2rem;
+    padding: 0 6rem;
 } 
 section.reviews .slider .slide p {
     font-family: "lato", sans-serif;
@@ -726,6 +726,10 @@ footer .footer-end{
     }
     section.reviews .slider .slide p{
         line-height: 2rem;
+    }
+    section.reviews .slider .slide
+    {
+        padding:0;
     }
     section.reviews .slider .slide p{
         padding-bottom: -5rem;
