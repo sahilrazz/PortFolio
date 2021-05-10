@@ -40,7 +40,28 @@ header {
 .container {
     max-width: 1152px;
     padding: 0 1 5px;
-    margin: auto auto;
+    margin: 0 auto;
+}
+/* media query */
+@media(min-width:576px){
+    .container{
+        max-width: 540px;
+    }
+}
+@media(min-width:768px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media(min-width:992px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media(min-width:1200px){
+    .container{
+        max-width: 1152px;
+    }
 }
 
 header nav  .left a {
@@ -125,6 +146,7 @@ section
 }
 section.about .about-me-img{
     height:450px;
+    border-radius: 10%;
 }
 
 section.about h1{
@@ -279,7 +301,7 @@ section.reviews .slider .slide{
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0 10rem;
+    padding: 0 2rem;
 } 
 section.reviews .slider .slide p {
     font-family: "lato", sans-serif;
@@ -528,3 +550,211 @@ footer .footer-end{
 }
 
 /* okay */
+
+
+.site-main-wrapper{
+    position: relative;
+}
+.hamberger{
+    
+    position: absolute;
+    top:40px;
+    right: 40px;
+    z-index: 11;
+    background: none;
+    border:none;
+    outline: none;
+    cursor: pointer;
+
+}
+.hamberger img{
+    width: 30px;
+}
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background: var(--light);
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+    transform: translateX(-100%);
+    transition: All .5s ease-in-out;
+}
+.open{
+    transform: translateX(0);
+}
+.times{
+    position: fixed;
+    top:30px;
+    right: 30px;
+    border:none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+.times img{
+    width: 30px;
+}
+
+.mobile-nav ul {
+    list-style: none;
+
+}
+.mobile-nav ul li{
+    margin: 2rem;
+}
+.mobile-nav ul li a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 1rem;
+    border:1.5px solid var(--secondary);
+    border-radius: 20%;
+    padding: 0.5rem;
+    transition: all .3s ease;
+
+}
+.mobile-nav ul li a:hover{
+    background: var(--ternary);
+    color: var(--pure);
+}
+
+.mobile-nav ul li img{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    object-fit: cover ;
+}
+
+/* media query */
+@media (max-width:1024px)
+{
+    header #header-nav {
+        display: none;
+    }
+    
+    .hero .left img{
+        width: 260px;
+    }
+    .hero .right h1{
+        font-size: 3rem;
+    }
+    .hero{
+        padding-top: 5rem;
+    }
+    header{
+        clip-path: polygon(0 0, 100% 0, 100% 100%,45% 85%, 0 100% );
+    }
+    section.about .about-me-img{
+        height: 360px;
+    }
+    section.about p{
+        line-height: 1.9;
+        margin-right: 1rem;
+    }
+    section.services .card-wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+    section.work .card-wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+    section.blog .card-wrapper {
+        grid-template-columns: repeat(1,1fr);
+       
+    }
+    section.blog .card-wrapper .card {
+        margin: 2rem;
+        padding: 2rem;
+    }
+    section.blog{
+        clip-path: polygon(0 0, 100% 0, 100% 100%,45% 97%, 0 100% );
+    }
+    
+}
+@media(max-width:576px)
+{
+    .hero{
+        flex-direction: column;
+    }
+    header{
+        clip-path: polygon(0 0, 100% 0, 100% 100%,74% 94%, 0 100% );
+        /* height: 35rem; */
+    }
+    .hero .right{
+        position: absolute;
+        top:260px;
+        padding: 0 1rem;
+        background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0,9));
+    }
+    .hero .left{
+        margin-top: -4rem;
+        margin-right: -7rem;
+        padding-bottom: 3rem;
+    }
+    .about-inner-wrap{
+        flex-direction: column;
+    }
+    .about .right{
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .about .right .social {
+        justify-content: center;
+    }
+    section{
+        padding:3rem 0;
+    }
+    section.services .card-wrapper{
+        grid-template-columns: repeat(1,1fr);
+        margin: 0 1rem;
+    }
+    section.freelancer h1{
+        line-height: 2rem;
+        margin-bottom:1.8rem;
+    }
+    section.freelancer .btn-primary {
+        margin-top:1rem;
+    }
+    section.freelancer{
+        padding-bottom: 7rem;
+        clip-path: polygon(0 0, 100% 0, 100% 100%,74% 82%, 0 100% );
+        
+    }
+    .section-heading + p{
+        margin-bottom: 2rem;
+    }
+    section.reviews .slider .slide p{
+        line-height: 2rem;
+    }
+    section.reviews .slider .slide p{
+        padding-bottom: -5rem;
+    }
+    section.work .card-wrapper{
+        grid-template-columns: repeat(1,1fr);   
+        margin: 0 1rem;     
+    }
+    section.blog .card-wrapper{
+        grid-gap: 0;
+    }
+    section.blog{
+        padding-bottom: 5rem;
+    }
+    
+    section.contact .card-wrapper{
+        grid-template-columns: repeat(1,1fr);    
+    }
+    section.contact .card-wrapper{
+        margin-bottom: 2rem;
+    }
+    section.contact .card-wrapper .card h6{
+        font-size: 0.8rem;
+    }
+    form{
+        text-align: center;
+        padding:0 2rem;
+    }
+    section.contact .input-wrap{
+        grid-template-columns: repeat(1,1fr);    
+    }
+}
