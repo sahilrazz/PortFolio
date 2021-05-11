@@ -6,7 +6,7 @@ $(document).ready(function () {
         dotsClass: 'dots',
         // auto run ________________________
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 2000,
         pauseOnFocus: false,
         pauseOnHover: false,
         pauseOnDotsHover: false,
